@@ -1,32 +1,52 @@
-body{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1px;
-    padding: 0 0 0 0px;
-    margin: 0 0 0 0px;
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1px;
+  padding: 0 0 0 0px;
+  margin: 0 0 0 0px;
 }
 
-header{
-    width: 100%;
+header {
+  width: 100%;
 }
 
-menu{
-
+menu {
 }
 
-.logo_img{
-    
+main {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-main{
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+footer {
+  width: 100%;
 }
 
-footer{
-    width: 100%;
+a {
+  color: #000;
 }
 
+p {
+  color: #000;
+}
+
+.logo_img {
+}
+
+.main_img {
+  width: ;
+  height: ;
+  border-radius: 5px;
+}
+
+.adress_footer {
+}
+
+.person_link {
+}
+
+.about_person {
+}
