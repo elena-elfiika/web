@@ -3,7 +3,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 1px;
+  font-size: 14px;
   padding: 0 0 0 0px;
   margin: 0 0 0 0px;
 }
@@ -49,4 +49,16 @@ p {
 }
 
 .about_person {
+}
+
+div.campus_part{
+
+}
+
+p.campus_part{
+
+}
+
+img.campus_part{
+  
 }
