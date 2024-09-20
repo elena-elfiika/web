@@ -13,10 +13,13 @@
     <body>
         <main>
         <?php
-        // use Arius\NumberFormatter;
-
+        // Часовой пояс
         date_default_timezone_set("Europe/Moscow");
+
+        //Дата
         $date = new DateTime();
+
+        //Форматирование
         $intlFormatter = new IntlDateFormatter('ru_RU', IntlDateFormatter::FULL, IntlDateFormatter::FULL);
         $intlFormatter->setPattern('MMMM YYYY');
         $weekform = new IntlDateFormatter('ru_RU', IntlDateFormatter::FULL, IntlDateFormatter::FULL);
