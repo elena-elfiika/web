@@ -1,0 +1,32 @@
+body{
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+}
+
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-bottom: 35px;
+    border-radius: 10px;
+    border: solid 2px #555;
+    padding: 20px 10px 35px 10px;
+}
+
+table{
+    border: none;
+}
+
+.generated_dollars{
+    color: darkgreen;
+}
+
+
+
+.generated_colours{
+    border: #000 solid 0px;
+}
+
+.center{
+    text-align: center;
+}
