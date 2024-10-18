@@ -244,3 +244,17 @@ img.campus{
   font-style: oblique;
   color: #acacac;
 }
+
+.like-button{
+  text-align: center;
+}
+.like-button form{
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.like-button button{
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
