@@ -244,3 +244,31 @@ img.campus{
   font-style: oblique;
   color: #acacac;
 }
+
+.like-button{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.like-button form{
+  margin-bottom: 0;
+}
+
+.like-button button{
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.like-button p{
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.a_person_like_more{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

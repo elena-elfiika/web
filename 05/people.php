@@ -71,7 +71,28 @@
                     <br />
                     Председатель президиума Ученого совета
                 </p>
-                <a href="person_001.php">Подробнее</a>
+                <div class="a_person_like_more">
+                    <div class="like-button">
+                        <form class="like-form" method="POST" action="like.php">
+                            <input type="hidden" name="like_id" value="like1">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="red"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                            </button>
+                        </form>
+                        <p>
+                            <?php 
+                        $file_l = 'likes.json';
+                        $data = json_decode(file_get_contents($file_l), true);
+                        echo isset($data[0]['like1']) ? $data[0]['like1'] : 0;
+                        ?>
+                        </p>
+                    </div>
+                    <a href="person_001.php">Подробнее</a>
+                </div>
                 <?php
                 // Чтение текущих данных из файла
                 $file = 'data.json';
@@ -86,6 +107,7 @@
                 } else {
                     $current_data = [];
                 }
+
                 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['form_id'] == 1) {
                     $name = $_POST['name'];
                     $comment = $_POST['comment'];
@@ -121,7 +143,29 @@
                     <br />
                     Руководитель Международного научного центра «Нелинейные и адаптивные системы управления»
                 </p>
-                <a href="person_002.php">Подробнее</a>
+                <div class="a_person_like_more">
+                    <div class="like-button">
+                        <form method="POST" action="like.php">
+                            <input type="hidden" name="like_id" value="like2">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="red"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                            </button>
+                        </form>
+                        <p>
+                            <?php 
+                        $file_l = 'likes.json';
+                        $data = json_decode(file_get_contents($file_l), true);
+                        echo isset($data[0]['like2']) ? $data[0]['like2'] : 0;
+                        ?>
+                        </p>
+                    </div>
+
+                    <a href="person_002.php">Подробнее</a>
+                </div>
 
                 <?php
                 // Чтение текущих данных из файла
@@ -179,8 +223,28 @@
                     <br />
                     Старший научный сотрудник национального центра когнитивных разработок
                 </p>
-                <a href="person_003.php">Подробнее</a>
-
+                <div class="a_person_like_more">
+                    <div class="like-button">
+                        <form method="POST" action="like.php">
+                            <input type="hidden" name="like_id" value="like3">
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="red"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                            </button>
+                        </form>
+                        <p>
+                            <?php 
+                        $file_l = 'likes.json';
+                        $data = json_decode(file_get_contents($file_l), true);
+                        echo isset($data[0]['like3']) ? $data[0]['like3'] : 0;
+                        ?>
+                        </p>
+                    </div>
+                    <a href="person_003.php">Подробнее</a>
+                </div>
 
                 <?php
                 // Чтение текущих данных из файла
