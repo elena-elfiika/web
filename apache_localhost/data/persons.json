@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Васильев Владимир Николаевич",
+        "title": "Ректор",
+        "role": "Председатель президиума Ученого совета",
+        "img": "https://itmo.ru/images/person/small/p1.jpg",
+        "like_id": "like1",
+        "form_id": "form1",
+        "comments_file": "data/form1.json",
+        "personal_link":"person_001"
+    },
+    {
+        "name": "Бобцов Алексей Алексеевич",
+        "title": "Директор мегафакультета компьютерных технологий и управления",
+        "role": "Профессор факультета систем управления и робототехники, руководитель Международного научного центра «Нелинейные и адаптивные системы управления»",
+        "img": "https://itmo.ru/images/person/small/p322.jpg",
+        "like_id": "like2",
+        "form_id": "form2",
+        "comments_file": "data/form2.json",
+        "personal_link":"person_002"
+    },
+    {
+        "name": "Кустарев Павел Валерьевич",
+        "title": "Декан, доцент факультета программной инженерии и компьютерной техники",
+        "role": "Главный конструктор научно-исследовательского центра оборонных и двойных технологий, старший научный сотрудник национального центра когнитивных разработок",
+        "img": "https://itmo.ru/images/person/small/p971.jpg",
+        "like_id": "like3",
+        "form_id": "form3",
+        "comments_file": "data/form3.json",
+        "personal_link":"person_003"
+    },
+    {
+        "name": "Рущенко Нина Геннадиевна",
+        "title": "Самая главная",
+        "role": "Лучшая женщина в мире",
+        "img": "img/320.jpeg",
+        "like_id": "like4",
+        "form_id": "form4",
+        "comments_file": "data/form4.json",
+        "personal_link":"person_004"
+    }
+]
