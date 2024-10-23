@@ -25,7 +25,7 @@
         $page = isset($_GET['page']) ? htmlspecialchars($_GET['page']) : 'home';
         
         if ($page === 'home') {
-            include 'home.php'; // Здесь должна быть ваша главная страница
+            include 'home.php';
         } elseif (array_key_exists($page, $routes) && file_exists($routes[$page])) {
             include $routes[$page];
         } else {

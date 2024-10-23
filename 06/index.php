@@ -12,8 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style/main.css">
 
-        <title>Университет ИТМО | <?php ?>
-            </title>
+        <title>Университет ИТМО</title>
     </head>
 
     <body>
@@ -25,7 +24,7 @@
         $page = isset($_GET['page']) ? htmlspecialchars($_GET['page']) : 'home';
         
         if ($page === 'home') {
-            include 'home.php'; // Здесь должна быть ваша главная страница
+            include 'home.php'; 
         } elseif (array_key_exists($page, $routes) && file_exists($routes[$page])) {
             include $routes[$page];
         } else {

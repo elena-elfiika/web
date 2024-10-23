@@ -35,7 +35,7 @@
     <menu>
         <?php
         if (isset($_GET['page'])) {
-            $page = $_GET['page']; 
+            $page = isset($_GET['page']) ? htmlspecialchars($_GET['page']) : 'home';
             switch ($page) {
                 case 'about': 
                     echo '<a href="index.php?page=home">Главная</a> <a href="index.php?page=people">Персоналии</a> <a href="index.php?page=campus">Кампус</a> <p>О нас</p>';
