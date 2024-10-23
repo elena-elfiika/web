@@ -44,7 +44,7 @@ menu p{
   display: inline-block;
   padding-right: 10px;
   margin: 0;
-  text-decoration: none;
+  text-decoration: underline;
   color: #fff;
 }
 menu a{
