@@ -1,2 +1,0 @@
-[Thu Oct 24 01:14:58.280381 2024] [mpm_prefork:notice] [pid 45996] AH00163: Apache/2.4.62 (Unix) PHP/8.3.11 configured -- resuming normal operations
-[Thu Oct 24 01:14:58.281282 2024] [core:notice] [pid 45996] AH00094: Command line: 'httpd'
