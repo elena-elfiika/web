@@ -1,0 +1,21 @@
+Options -Indexes
+RewriteEngine On
+
+# Устанавливаем index.php как файл по умолчанию
+DirectoryIndex index.php index.html
+
+# Исключить статические файлы из обработки перезаписи
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|jpeg|png|gif|ico)$ [NC]
+
+# Перенаправление запросов к страницам без .php (для красивых URL)
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?page=$1 [L,QSA]
+
+# Перенаправление старых URL с page= к красивым URL, если нет красивого URL
+RewriteCond %{QUERY_STRING} ^page=([a-zA-Z0-9_-]+)$
+RewriteCond %{REQUEST_URI} !^/index\.php$ [NC]
+RewriteRule ^index\.php$ /%1? [L,R=301]
+
+# Перенаправление запросов к admin.php
+RewriteRule ^admin$ admin.php [L,QSA]
