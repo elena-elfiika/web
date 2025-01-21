@@ -1,0 +1,9 @@
+[Sat Jan 18 03:30:29.195783 2025] [mpm_prefork:notice] [pid 2089] AH00163: Apache/2.4.62 (Unix) PHP/8.3.13 configured -- resuming normal operations
+[Sat Jan 18 03:30:29.196116 2025] [core:notice] [pid 2089] AH00094: Command line: 'httpd'
+[Sat Jan 18 04:22:13.694523 2025] [mpm_prefork:notice] [pid 2089] AH00169: caught SIGTERM, shutting down
+[Mon Jan 20 19:21:43.947558 2025] [mpm_prefork:notice] [pid 2932] AH00163: Apache/2.4.62 (Unix) PHP/8.3.13 configured -- resuming normal operations
+[Mon Jan 20 19:21:43.958766 2025] [core:notice] [pid 2932] AH00094: Command line: 'httpd'
+[Tue Jan 21 21:14:22.252826 2025] [php:error] [pid 2937] [client 127.0.0.1:62772] script '/Users/elena/Documents/Education/Git_Hub/web/apache_localhost/page=portfolio_element.php' not found or unable to stat, referer: http://127.0.0.1/price?page=portfolio
+[Tue Jan 21 21:15:18.866048 2025] [php:error] [pid 2935] [client 127.0.0.1:63071] script '/Users/elena/Documents/Education/Git_Hub/web/apache_localhost/page=portfolio_element.php' not found or unable to stat, referer: http://127.0.0.1/price?page=portfolio
+[Tue Jan 21 21:16:58.866468 2025] [php:error] [pid 2934] [client 127.0.0.1:63635] script '/Users/elena/Documents/Education/Git_Hub/web/apache_localhost/page=portfolio_element.php' not found or unable to stat, referer: http://127.0.0.1/?page=portfolio
+[Tue Jan 21 21:17:05.801636 2025] [php:error] [pid 2934] [client 127.0.0.1:63635] script '/Users/elena/Documents/Education/Git_Hub/web/apache_localhost/page=portfolio_element.php' not found or unable to stat, referer: http://127.0.0.1/?page=portfolio
