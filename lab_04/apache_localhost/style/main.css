@@ -1,0 +1,1054 @@
+body {
+    font-size: 0;
+    padding: 0 0 0 0px;
+    margin: 0 0 0 0px;
+    font-family: Oswald;
+    font-weight: 200;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex-wrap: nowrap;
+
+}
+
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    font-family: Oswald;
+    position:sticky;
+    top: 0%;
+    z-index: 1;
+}
+
+menu {
+    margin: 0 auto 0 auto;
+    padding-top: 15px;
+    text-align: center;
+}
+
+menu ul {
+    display: inline;
+}
+
+menu li {
+    margin: 0 20px;
+    padding: 0;
+    display: inline-block;
+}
+
+
+main {
+    width: 80%;
+    min-width: 1000px;
+    flex: 1;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h2 {
+    color: black;
+    font-size: 36px;
+    font-family: Montserrat;
+    font-weight: 700;
+    height: fit-content;
+}
+
+h3{
+    color: black;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+p {
+    color: black;
+    font-size: 16px;
+    font-family: Oswald;
+    font-weight: 300;
+    word-wrap: break-word"
+
+}
+
+p.top{
+    margin-block-start: 0;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 200;
+    color: #fff;
+}
+
+a:active, a:hover, a:visited{
+    color: #fff;
+}
+
+a.back{
+    color: #000;
+    text-decoration: underline;
+}
+
+.active_menu{
+    font-weight: 400;
+}
+
+/* Домашняя */
+
+.main_left {
+    min-height: 720px;
+    width: 50%;
+}
+
+.about_left{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.main_right {
+    height: 720px;
+    width: 50%;
+    padding-top: 200px;
+    padding-left: 52px;
+}
+
+.about_right{
+    width: 50%;
+    padding-left: 52px;
+}
+
+.profile_pic{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main_form {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+}
+
+.main_form h2 {
+    text-align: center;
+}
+
+h2.center{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+h3.center{
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+/* О фотографе */
+
+.main_about{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+}
+
+.main_about h2 {
+    text-align: center;
+}
+
+.experience_timeline{
+    list-style: none;
+}
+
+.experience_timeline_element{
+    font-weight: 600;
+}
+
+
+/* Форма */
+form {
+    width: 100%;
+    font-size: 16px;
+}
+
+.form_ul {
+    list-style: none;
+}
+
+.form_ul li {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 50px;
+    align-items: baseline;
+    align-content: center;
+
+}
+
+label {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+input {
+    font-family: Oswald;
+    font-weight: 200;
+    height: 40px;
+    margin-top: 8px;
+    border: #000 solid 1px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+input[type="submit"] {
+    background-color: #fff;
+    border: #000 solid 1px;
+    border-radius: 10px;
+    height: 40px;
+}
+
+select{
+    font-family: Oswald;
+    font-weight: 300;
+    color: #000;
+    height: 40px;
+    margin-top: 8px;
+    border: #000 solid 1px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+    margin-top: 8px;
+    font-weight: 200;
+    font-family: Oswald;
+    border: #000 solid 1px;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.form_ul label {
+    flex: 0.9;
+    text-align: right;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.form_ul input {
+    flex: 2;
+}
+
+.form_ul select{
+    flex: 2;
+}
+
+.form_ul .center {
+    justify-content: center;
+}
+
+.form_ul input[type="submit"] {
+    flex: 0.6;
+}
+
+.form_ul button{
+    font-family: Oswald;
+    font-weight: 200;
+    height: 40px;
+    flex: 0.3;
+    margin: 8px auto;
+    border: #000 solid 1px;
+    border-radius: 10px;
+    padding-left: 10px;
+    background-color: #fff;
+    border: #000 solid 1px;
+    border-radius: 10px;
+    height: 40px;
+}
+
+/* Карусель */
+
+@keyframes tonext {
+    75% {
+        left: 0;
+    }
+
+    95% {
+        left: 100%;
+    }
+
+    98% {
+        left: 100%;
+    }
+
+    99% {
+        left: 0;
+    }
+}
+@keyframes tostart {
+    75% {
+        left: 0;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    98% {
+        left: -300%;
+    }
+
+    99% {
+        left: 0;
+    }
+}
+@keyframes snap {
+    96% {
+        scroll-snap-align: center;
+    }
+
+    97% {
+        scroll-snap-align: none;
+    }
+
+    99% {
+        scroll-snap-align: none;
+    }
+
+    100% {
+        scroll-snap-align: center;
+    }
+}
+* {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent;
+    /* thumb and track color */
+    scrollbar-width: 0px;
+}
+*::-webkit-scrollbar {
+    width: 0;
+}
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+* {
+    -ms-overflow-style: none;
+}
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.carousel {
+    position: relative;
+    height: 720px;
+}
+.carousel__slide img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+.carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: #DFDFDF;
+}
+.carousel__slide:nth-child(even) {
+    background-color: #DFDFDF;
+}
+.carousel__slide:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -40%, 70px);
+    color: #fff;
+    font-size: 18px;
+}
+.carousel__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+@media (hover: hover) {
+    .carousel__snapper {
+        animation-name: tonext, snap;
+        animation-timing-function: ease;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    .carousel__slide:last-child .carousel__snapper {
+        animation-name: tostart, snap;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+        animation-name: none;
+    }
+}
+.carousel:hover .carousel__snapper, .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+}
+
+.carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 24px;
+    left: 0;
+    text-align: center;
+}
+
+.carousel__navigation-list, .carousel__navigation-item {
+    display: inline-block;
+}
+
+.carousel__navigation-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #000000;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.2s;
+}
+
+.carousel__navigation-button:hover {
+    transform: scale(1.2);
+    background-color: #555;
+}
+
+/* Таймлайн */
+/* Обертка для таймлайна */
+.timeline {
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.timeline h3{
+    margin-top: 0;
+    margin-block-start: 0;
+    margin-block-end: 0.5em;
+}
+
+.timeline p{
+    margin-block-start: 0.5em;
+}
+
+/* Список элементов */
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Элементы списка */
+.timeline ul li {
+    position: relative;
+    margin: 0;
+    padding-bottom: 15px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Четные элементы - слева */
+.timeline ul li:nth-child(even) {
+    margin-right: calc(50% - 2px);
+    padding-left: 20px; /* отступ от линии */
+    flex-direction: row-reverse; /* меняем направление для выравнивания слева */
+    border-right: 2px #000000 solid;
+}
+
+.timeline ul li:nth-child(even) .timeline-content {
+    float: right;
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* Нечетные элементы - справа */
+.timeline ul li:nth-child(odd) {
+    margin-left: calc(50% - 2px);
+    padding-right: 20px; /* отступ от линии */  
+    border-left: 2px #000000 solid;
+}
+
+.timeline ul li:nth-child(odd) .timeline-content {
+    float: left;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Точки на линии */
+.timeline ul li:nth-child(odd)::after,
+.timeline ul li:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Линия между точками */
+.timeline ul li:nth-child(odd)::after {
+    left: -6px;  /* точка по левому краю */
+}
+
+.timeline ul li:nth-child(even)::before {
+    right: -6px;  /* точка по правому краю */
+}
+
+/* Убираем линии после последнего элемента */
+.timeline ul li:last-child, .timeline ul li:last-child{
+    border-left: none;
+    border-right: none;
+}
+
+.timeline ul li:last-child::after {
+    left: -4px;  /* точка по левому краю */
+}
+
+.timeline ul li:last-child::before {
+    right: -4px;  /* точка по правому краю */
+}
+
+/* Footer */
+
+footer{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    min-height: fit-content;
+    background-color: #000;
+    color: #fff;
+    bottom: 0px;
+}
+
+footer p{
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.medialinks{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.medialinks a{
+    text-decoration: underline;
+    padding-right: 15px;
+}
+
+/* Contacts */
+
+.contacts_main{
+    width: 1000px;
+    padding-left: 250px;
+    padding-right: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+    font-size: 16px;
+}
+
+.contacts_main li{
+    margin-bottom: 20px;
+}
+
+.contacts_main a{
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #000;
+}
+
+/* Portfolio */
+
+.portf_descrip{
+    width: 60%;
+    min-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.portf_pagin{
+    width: 100%;
+    min-width: 1000px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.portf_pagin a{
+    font-size: 20px;
+    font-weight: 3500;
+    color: #000;
+    padding: 5px;
+}
+
+.portf_pagin a:hover{
+    color: #2e2e2e;
+    font-weight: 400;
+}
+
+.portf_all{
+    width: 100%;
+    min-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 20px;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.portf_item {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.portf_gallery{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    position: relative; 
+    z-index: 0;
+}
+
+.portf_gallery:hover{
+    transform: scale(1.1); 
+    z-index: 1;
+}
+
+.center_nav{
+    text-align: center;
+    min-width: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    object-position: center;
+    padding-bottom: 30px;
+}
+
+.portf_caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.portf_item:hover .portf_caption {
+    opacity: 1;
+    bottom: -5%;
+    left: -5%;
+    width: 110%;
+    height: 40%;
+}
+
+.portf_view{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+}
+
+/* Съемка */
+.gallery_all{
+    width: 100%;
+    min-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.gallery_item{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative; 
+    z-index: 0;
+}
+
+.gallery_item:hover{
+    transform: scale(1.1); 
+    z-index: 1;
+}
+
+a.back_portfolio{
+    color: #000;
+    text-decoration: underline;
+}
+
+.back_portfolio_center{
+    text-align: center;
+    color: #000;
+}
+
+.portf_el_h3 {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.like-button{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.like-button form{
+    margin-bottom: 0;
+}  
+
+.like-button button{
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+}
+
+.like-form{
+    display: inline;
+}
+
+/* Цены */
+.price-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.price-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.price_container{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    min-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.price-note {
+    border-top: #000 solid 1px;
+    padding-top: 10px;
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.calculator-form {
+    width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.result {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* 404 */
+
+.container_404{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+    flex: 1;
+}
+
+.full-width-button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Oswald;
+    background-color: #fff;
+    color: #000;
+    border: solid #000 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.full-width-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Feedback */
+.feedback_display{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.feedbacks_list{
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 25px;
+}
+
+.feedback{
+    height: 400px;
+    word-break: keep-all;
+    text-wrap: balance;
+    padding: 5px 20px;
+    border: #000 solid 1px;
+    border-radius: 5px;
+}
+
+.feedback_name{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.feedback_date{
+    font-family: Oswald;
+    font-size: 14px;
+    font-weight: 200;
+    color: #2e2e2e;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.feedback_text{
+    font-family: Oswald;
+    font-size: 16px;
+    font-weight: 300;
+    color: #2e2e2e;
+}
+
+.feedback_form{
+    display: flex;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+}
+
+.feedback_form input[type="submit"] {
+    flex: 0.3;
+}
+
+/* Admin */
+
+table.admintable{
+    font-size: 16px;
+    font-family: Oswald;
+    text-align: center;
+    color: #000;
+    border: solid #000 1px;
+    border-radius: 5px;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+.admintable tr{
+    border-bottom: #000 solid 1px;
+}
+
+.admintable a{
+    color: #000;
+    text-decoration: underline;
+}
+
+.feddbackadm{
+    color: #000;
+    width: 1200px;
+    margin: 10px auto;
+    padding-bottom: 25px;
+    font-size: 16px;
+}
+
+.feddbackadm p{
+    color: #000;
+}
+
+.feddbackadm a{
+    color: #000;
+}
+
+.feedback{
+    margin-bottom: 10px;
+    border: 1px #d5d5d5 solid;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+  }
+  
+  .feedback_name{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+  
+  .feedback_text{
+    font-size: 14px;
+    word-wrap: break-word;
+    margin-top: 0;
+  }
+  
+  .feedback_date{
+    font-size: 12px;
+    color: #acacac;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+
+  .pagination{
+    margin-bottom: 15px;
+  }
+  
+  .pagination a{
+    padding-right: 5px;
+    text-decoration: none;
+  }
+  
+  .pagination select{
+    border-radius: 5px;
+    border: 2px #acacac solid;
+    background-color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+  }
+  
+  .pagination button{
+    border-radius: 5px;
+    border: 2px #acacac solid;
+    background-color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+  }
+
+.orders {
+    display: flex;
+    flex-direction: column;
+}
+
+.order {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.current_p {
+    font-weight: bold;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}

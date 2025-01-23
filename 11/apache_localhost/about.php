@@ -65,63 +65,63 @@ $_SESSION['captcha_result'] = $sum;
     <div class="history">
         <h2>Отзывы</h2>
         <?php
-    $pdo = new PDO('mysql:host=127.0.0.1:3306;dbname=test', 'site_connection', 'Class_data1.', [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_EMULATE_PREPARES => false
-    ]);
-
-    // Форма
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Проверка капчи
-        $user_answer = $_POST['captcha']; // Ответ пользователя
-        $correct_answer = $_SESSION['captcha_result']; // Правильный ответ
-    
-        // Проверка ответа
-        if ($user_answer != $correct_answer) {
-            // echo "<script>alert('Неверный код капчи!');</script>";
-            exit; // Завершаем выполнение, если ответ неверный
-        }
-    
-        // Если капча правильная, обрабатываем данные отзыва
-        $name = htmlspecialchars(strip_tags($_POST['name']));
-        $feedback = htmlspecialchars(strip_tags($_POST['feedback']));
-        $status = htmlspecialchars(strip_tags($_POST['status']));
-    
-        // Подключение к базе данных и сохранение отзыва
         $pdo = new PDO('mysql:host=127.0.0.1:3306;dbname=test', 'site_connection', 'Class_data1.', [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_EMULATE_PREPARES => false
         ]);
-    
-        $stmt = $pdo->prepare("INSERT INTO feedback_university (user, date, text, status) VALUES (:name, NOW(), :feedback, :status)");
-        $stmt->execute(['name' => $name, 'feedback' => $feedback, 'status' => $status]);
-    
-        // Очистка сессионных данных капчи
-        unset($_SESSION['captcha_result']);
-    }
 
-    // Параметры сортировки
-    $order = $_GET['order'] ?? 'date';
-    $direction = $_GET['direction'] ?? 'DESC';
-    $limit = (int)($_GET['limit'] ?? 10);
-    $offset = (int)($_GET['page_num'] ?? 0) * $limit;
+        // Форма
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Проверка капчи
+            $user_answer = $_POST['captcha']; // Ответ пользователя
+            $correct_answer = $_SESSION['captcha_result']; // Правильный ответ
 
-    $allowedColumns = ['user', 'date', 'text', 'status'];
-    $allowedDirections = ['ASC', 'DESC'];
+            // Проверка ответа
+            if ($user_answer != $correct_answer) {
+                // echo "<script>alert('Неверный код капчи!');</script>";
+                exit; // Завершаем выполнение, если ответ неверный
+            }
 
-    $order = in_array($order, $allowedColumns) ? $order : 'date';
-    $direction = in_array($direction, $allowedDirections) ? $direction : 'DESC';
-    $limit = in_array($limit, [10, 20, 50, 100]) ? $limit : 10;
+            // Если капча правильная, обрабатываем данные отзыва
+            $name = htmlspecialchars(strip_tags($_POST['name']));
+            $feedback = htmlspecialchars(strip_tags($_POST['feedback']));
+            $status = htmlspecialchars(strip_tags($_POST['status']));
 
-    $stmt = $pdo->prepare("SELECT user, date, text, status FROM feedback_university ORDER BY $order $direction LIMIT :limit OFFSET :offset");
-    $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
-    $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
-    $stmt->execute();
-    $feedbacks = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
-            <!-- Пагинация -->
-            <!-- Пагинация — это процесс разделения больших объемов данных на более мелкие части (страницы) и отображение этих частей по очереди, чтобы облегчить восприятие и улучшить производительность на веб-страницах. -->
-        <div class="pagination">            
+            // Подключение к базе данных и сохранение отзыва
+            $pdo = new PDO('mysql:host=127.0.0.1:3306;dbname=test', 'site_connection', 'Class_data1.', [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_EMULATE_PREPARES => false
+            ]);
+
+            $stmt = $pdo->prepare("INSERT INTO feedback_university (user, date, text, status) VALUES (:name, NOW(), :feedback, :status)");
+            $stmt->execute(['name' => $name, 'feedback' => $feedback, 'status' => $status]);
+
+            // Очистка сессионных данных капчи
+            unset($_SESSION['captcha_result']);
+        }
+
+        // Параметры сортировки
+        $order = $_GET['order'] ?? 'date';
+        $direction = $_GET['direction'] ?? 'DESC';
+        $limit = (int)($_GET['limit'] ?? 10);
+        $offset = (int)($_GET['page_num'] ?? 0) * $limit;
+
+        $allowedColumns = ['user', 'date', 'text', 'status'];
+        $allowedDirections = ['ASC', 'DESC'];
+
+        $order = in_array($order, $allowedColumns) ? $order : 'date';
+        $direction = in_array($direction, $allowedDirections) ? $direction : 'DESC';
+        $limit = in_array($limit, [10, 20, 50, 100]) ? $limit : 10;
+
+        $stmt = $pdo->prepare("SELECT user, date, text, status FROM feedback_university ORDER BY $order $direction LIMIT :limit OFFSET :offset");
+        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+        $stmt->execute();
+        $feedbacks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+        <!-- Пагинация -->
+        <!-- Пагинация — это процесс разделения больших объемов данных на более мелкие части (страницы) и отображение этих частей по очереди, чтобы облегчить восприятие и улучшить производительность на веб-страницах. -->
+        <div class="pagination">
             <form method="GET">
                 <label for="limit">Отзывы на странице:</label>
                 <select name="limit" id="limit">
@@ -150,13 +150,13 @@ $_SESSION['captcha_result'] = $sum;
                 $totalPages = ceil($pdo->query("SELECT COUNT(*) FROM feedback_university")->fetchColumn() / $limit);
                 $currentPage = isset($_GET['page']) ? $_GET['page'] : 'about';
                 $currentPageNum = isset($_GET['page_num']) ? (int)$_GET['page_num'] : 0;
-                
+
                 for ($i = 0; $i < $totalPages; $i++):
                     $isCurrentPage = ($i == $currentPageNum);
                 ?>
                     <a href="?page=<?= $currentPage ?>&page_num=<?= $i ?>&limit=<?= $limit ?>&order=<?= $order ?>&direction=<?= $direction ?>" class="<?= $isCurrentPage ? 'current_p' : '' ?>">
-                    <?= $i + 1 ?>
-                </a>
+                        <?= $i + 1 ?>
+                    </a>
                 <?php endfor; ?>
             </p>
         </div>
@@ -165,15 +165,15 @@ $_SESSION['captcha_result'] = $sum;
         <?php foreach ($feedbacks as $feedback): ?>
             <?php if ($feedback['status'] === 'approve'): ?>
                 <div class="feedback">
-                <p class="feedback_name">
-                    <?= htmlspecialchars($feedback['user']) ?>
-                </p>
-                <p class="feedback_date">
-                    <?= htmlspecialchars($feedback['date']) ?>
-                </p>
-                <p class="feedback_text">
-                    <?= htmlspecialchars($feedback['text']) ?>
-                </p>
+                    <p class="feedback_name">
+                        <?= htmlspecialchars($feedback['user']) ?>
+                    </p>
+                    <p class="feedback_date">
+                        <?= htmlspecialchars($feedback['date']) ?>
+                    </p>
+                    <p class="feedback_text">
+                        <?= htmlspecialchars($feedback['text']) ?>
+                    </p>
                 </div>
             <?php endif; ?>
         <?php endforeach; ?>
